@@ -1,0 +1,10 @@
+.bold-brand {
+    font-weight: bold;
+  }
+  
+  .space{
+    background-color: black;
+    display: inline-block;
+    width: 100px;
+    height: 300px;
+  }
