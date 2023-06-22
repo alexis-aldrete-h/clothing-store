@@ -1,0 +1,15 @@
+.bg-body-tertiary.mb-3.navbar.navbar-light {
+  margin: 0 !important;
+  background-color: white !important;
+  height: 6vh;
+}
+
+.brand-logo.navbar-brand {
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  margin-left: 2rem !important;
+}
+
+.navbar-toggler.collapsed {
+  border: none !important;
+}

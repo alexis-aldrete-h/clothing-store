@@ -1,0 +1,55 @@
+.seasons-part {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 94vh;
+}
+  
+.season-one {
+  background-image: url('../../../assets/images/webImages/season1BackgroundImage.webp');
+}
+  
+.season-two {
+  background-image: url('../../../assets/images/webImages/season2BackgroundImage.webp');
+}
+  
+.season-one,
+.season-two {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+  
+.season-one::before,
+.season-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+  
+.season-container-title-card-wrapper {
+  position: relative;
+  padding-left: 10%;
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+}
+  
+@media (max-width: 768px) {
+  .season-one,
+  .season-two {
+    flex: 1 1 100%;
+  }
+}
+  
