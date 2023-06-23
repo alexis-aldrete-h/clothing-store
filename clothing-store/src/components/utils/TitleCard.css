@@ -1,0 +1,17 @@
+.title-card {
+    flex: 0 0 25%;
+    height: 50vh;
+    display: flex;
+    border-right: solid 0.25px gray;
+    border-bottom: solid 0.25px gray;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-card h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin: 0 20%;
+}

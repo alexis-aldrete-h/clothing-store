@@ -3,6 +3,8 @@ import './CatalogPart.css'
 import ProductCard from '../../utils/ProductCard';
 
 import productsMockedData from '../../../data/mockedData';
+import TitleCard from '../../utils/TitleCard';
+import ButtonCard from '../../utils/ButtonCard';
 
 const CatalogPart = () => {
 
@@ -10,6 +12,7 @@ const CatalogPart = () => {
 
     return (
         <div className='catalog-part'>
+          <TitleCard title='Some of our favorites' />
           {productsData.map((product, index) => (
             <ProductCard
               key={index}
@@ -18,6 +21,7 @@ const CatalogPart = () => {
               price={product.price}
             />
           ))}
+          <ButtonCard title='VIEW ALL PRODUCTS'/>
         </div>
     );
 }
