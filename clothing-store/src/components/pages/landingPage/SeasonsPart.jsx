@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './SeasonsPart.css';
-import TitleButtonCard from '../../utils/TitleButtonCard';
+import TitleButtonCard from '../../common/TitleButtonCard';
 
 const SeasonsPart = (props) => {
     return (

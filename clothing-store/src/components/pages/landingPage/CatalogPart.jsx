@@ -1,10 +1,10 @@
 import React from 'react';
 import './CatalogPart.css'
-import ProductCard from '../../utils/ProductCard';
+import ProductCard from '../../common/ProductCard';
 
 import productsMockedData from '../../../data/mockedData';
-import TitleCard from '../../utils/TitleCard';
-import ButtonCard from '../../utils/ButtonCard';
+import TitleCard from '../../common/TitleCard';
+import ButtonCard from '../../common/ButtonCard';
 
 const CatalogPart = () => {
 
