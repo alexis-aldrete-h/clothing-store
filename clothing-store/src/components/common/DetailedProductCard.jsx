@@ -2,6 +2,7 @@ import React from 'react';
 
 import './DetailedProductCard.css';
 import SizesRadionButtons from './SizesRadioButtons';
+import { AddToCartButton } from './AddToCartButton';
 
 const DetailedProductCard = (props) => {
     return (<div className='detailed-product-card'>
@@ -31,7 +32,7 @@ const DetailedProductCard = (props) => {
             <br/>
             <br/>
             <div className="add-to-cart-button">
-                <button className='add-to-cart-button'>ADD TO CART</button>
+                <AddToCartButton />
             </div>
             <br/>
             <br/>
