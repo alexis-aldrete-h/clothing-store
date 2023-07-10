@@ -1,11 +1,11 @@
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LandingPage from './components/pages/landingPage/LandingPage';
+import DetailedProductPage from './components/pages/detailedProductPage/DetailedProductPage';
 
 function App() {
   return (
-    < LandingPage />
+    <DetailedProductPage />
   );
 }
 

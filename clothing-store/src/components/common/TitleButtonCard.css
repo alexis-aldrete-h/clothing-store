@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-button{
+.title-button-card button{
     background-color: transparent;
     border: solid 2px white;
     border-radius: 15px;
