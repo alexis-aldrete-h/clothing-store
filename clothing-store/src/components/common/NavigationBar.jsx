@@ -17,7 +17,7 @@ const NavigationBar = () => {
       {[false].map((expand) => (
         <Navbar style={navbarStyle} key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
-            <Navbar.Brand href="#" className='brand-logo'>SUSPICIOUS ANTWERP</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/" className='brand-logo'>SUSPICIOUS ANTWERP</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
