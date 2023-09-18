@@ -3,6 +3,7 @@ import React from 'react';
 import './DetailedProductPage.css';
 import NavigationBar from '../../common/NavigationBar';
 import DetailedProductCard from '../../common/DetailedProductCard';
+import Footer from '../../common/Footer';
 
 const DetailedProductPage = () => {
     return (<div className='detailed-product-page'>
@@ -20,7 +21,8 @@ const DetailedProductPage = () => {
                 Your items will be shipped out within 1 week
                 Customs & Brexit info can be found here
                 Please visit our help center if you have any questions'
-            />
+        />
+        <Footer />
     </div>)
 }
 

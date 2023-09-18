@@ -1,0 +1,21 @@
+.off-canvas {
+    width: 480px !important;
+}
+
+.off-canvas hr{
+    margin: 0;
+}
+
+.off-canvas .offcanvas-header{
+    padding: 2rem;
+}
+
+.off-canvas .off-canvas-title{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.off-canvas .cart-total-products{
+    margin:1rem 2rem;
+    color: grey;
+}
