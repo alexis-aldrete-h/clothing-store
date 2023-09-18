@@ -2,23 +2,23 @@ import React from 'react';
 import './CatalogPart.css'
 import ProductCard from '../../common/ProductCard';
 
-import catalogProductsMockedData from '../../../data/catalogProductsData';
+import landingPageCatalogProductsMockedData from '../../../data/landingPageCatalogProductsData';
 import TitleCard from '../../common/TitleCard';
 import ButtonCard from '../../common/ButtonCard';
 
 const CatalogPart = () => {
 
-    const catalogProductsData = catalogProductsMockedData;
+    const landingPageCatalogProductsData = landingPageCatalogProductsMockedData;
 
     return (
         <div className='catalog-part'>
           <TitleCard title='Some of our favorites' />
-          {catalogProductsData.map((catalogProduct, index) => (
+          {landingPageCatalogProductsData.map((landingPageCatalogProduct, index) => (
             <ProductCard
               key={index}
-              imagePath={require(`../../../${catalogProduct.imagePath}`)}
-              title={catalogProduct.title}
-              price={catalogProduct.price}
+              imagePath={require(`../../../${landingPageCatalogProduct.imagePath}`)}
+              title={landingPageCatalogProduct.title}
+              price={landingPageCatalogProduct.price}
             />
           ))}
           <ButtonCard title='VIEW ALL PRODUCTS'/>

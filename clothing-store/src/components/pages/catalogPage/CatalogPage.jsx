@@ -1,19 +1,16 @@
 import React from 'react';
-
 import NavigationBar from '../../common/NavigationBar';
-import SeasonsPart from './SeasonsPart';
-import CatalogPart from './CatalogPart';
 import Footer from '../../common/Footer';
+import CatalogPart from './CatalogPart';
 
-const LandingPage = () => {
-    return(
-        <div className='landing-page'>
+const CatalogPage = () => {
+    return (
+        <div className='catalog-page'>
             <NavigationBar />
-            <SeasonsPart />
             <CatalogPart />
             <Footer />
         </div>
     )
 }
 
-export default LandingPage;
+export default CatalogPage;

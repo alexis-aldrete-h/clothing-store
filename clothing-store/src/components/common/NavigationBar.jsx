@@ -31,7 +31,7 @@ const NavigationBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/">Best Sellers</Nav.Link>
+                  <Nav.Link as={Link} to="/catalog-page">Best Sellers</Nav.Link>
                   <Nav.Link as={Link} to="/detailed-product-page">Detailed Product</Nav.Link>
                   {/* <Nav.Link as={Link} to="/">Coming Soon</Nav.Link>
                   <Nav.Link as={Link} to="/">Gift Cards</Nav.Link>
