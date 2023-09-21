@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
+
+import { useSelectedProductContext } from '../SelectedProductContext';
 
 import './SizesRadioButtons.css';
 
 function SizesRadioButtons() {
+  const { updateSelectedProductSize } = useSelectedProductContext();
   const [radioValue, setRadioValue] = useState('1');
 
   const radios = [
@@ -15,6 +18,11 @@ function SizesRadioButtons() {
     { name: 'XL', value: '5' },
     { name: 'XXL', value: '6' }
   ];
+
+  const handleSizeChange = (sizeValue, sizeName) => {
+    setRadioValue(sizeValue);
+    updateSelectedProductSize(sizeName);
+  };
 
   return (
       <ButtonGroup>
@@ -28,7 +36,7 @@ function SizesRadioButtons() {
             name="radio"
             value={radio.value}
             checked={radioValue === radio.value}
-            onChange={(e) => setRadioValue(e.currentTarget.value)}
+            onChange={(e) => handleSizeChange(radio.value, radio.name)}
           >
             {radio.name}
           </ToggleButton>

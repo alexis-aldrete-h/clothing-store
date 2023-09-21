@@ -1,46 +1,34 @@
 const cartProductsData = [
     {
-        imagePath: 'assets/images/products/product1Back.webp', 
-        title: '(The OG) The Playground Hoodie - Navy', 
-        price: '122.00', 
-        size: 'M',
-        quantity: 2,
-    },
-    {   
-        imagePath: 'assets/images/products/product2Back.webp', 
-        title: '(The OG) The Playground Hoodie - Sand', 
-        price: '122.00', 
-        size: 'S',
-        quantity: 1,
-    },
-    {
-        imagePath: 'assets/images/products/product3Back.webp', 
-        title: '(The OG) The Playground Hoodie - Navy', 
-        price: '122.00',
-        size: 'XL',
-        quantity: 1, 
-    },
-    {   
-        imagePath: 'assets/images/products/product4Back.webp', 
-        title: '(The OG) The Playground Hoodie - Sand', 
-        price: '122.00', 
-        size: 'S',
-        quantity: 3,
-    },
-    {
-        imagePath: 'assets/images/products/product5Back.webp', 
-        title: '(The OG) The Playground Hoodie - Navy', 
-        price: '122.00', 
+        productId: 1,
+        title: 'Organic Cotton T-shirt',
+        price: '29.99',
+        description: 'A comfortable and eco-friendly t-shirt made from 100% organic cotton. Available in various colors and sizes.',
+        shipping: 'Your items will be shipped out within 1 week\nCustoms & Brexit info can be found here\nPlease visit our help center if you have any questions',
+        imagePath: 'assets/images/products/product1Back.webp',
         size: 'XS',
         quantity: 1,
     },
-    {   
-        imagePath: 'assets/images/products/product6Back.webp', 
-        title: '(The OG) The Playground Hoodie - Sand', 
-        price: '122.00', 
+    {
+        productId: 2,
+        title: 'Classic Denim Jeans',
+        price: '59.99',
+        description: 'Timeless denim jeans with a classic fit. Made from high-quality denim fabric for durability and style.',
+        shipping: 'Your items will be shipped out within 1 week\nCustoms & Brexit info can be found here\nPlease visit our help center if you have any questions',
+        imagePath: 'assets/images/products/product2Back.webp',
+        size: 'M',
+        quantity: 2,
+    },
+    {
+        productId: 3,
+        title: 'Running Shoes',
+        price: '79.99',
+        description: 'Lightweight and comfortable running shoes designed for athletes. Features advanced cushioning technology.',
+        shipping: 'Your items will be shipped out within 1 week\nCustoms & Brexit info can be found here\nPlease visit our help center if you have any questions',
+        imagePath: 'assets/images/products/product3Back.webp',
         size: 'L',
         quantity: 1,
-    }
+    },
 ];
 
 export default cartProductsData;

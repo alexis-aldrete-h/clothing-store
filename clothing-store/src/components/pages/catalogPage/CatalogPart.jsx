@@ -1,22 +1,21 @@
 import React from 'react';
+import { useCatalogContext } from '../../CatalogContext';
 
 import ProductCard from '../../common/ProductCard';
 
-import catalogProductsMockedData from '../../../data/catalogProductsData';
-
 const CatalogPart = () => {
 
-    const catalogProductsData = catalogProductsMockedData;
-
+  const { catalogProductsData } = useCatalogContext();
 
     return (
         <div className='catalog-part'>
-            {catalogProductsData.map((catalogProduct, index) => (
+            {catalogProductsData.map((product) => (
             <ProductCard
-              key={index}
-              imagePath={require(`../../../${catalogProduct.imagePath}`)}
-              title={catalogProduct.title}
-              price={catalogProduct.price}
+              key={product.productId}
+              productId={product.productId}
+              imagePath={require(`../../../${product.imagePath}`)}
+              title={product.title}
+              price={product.price}
             />
           ))}
         </div>

@@ -1,25 +1,31 @@
 import React from 'react';
 
 import './DetailedProductCard.css';
-import SizesRadionButtons from './SizesRadioButtons';
-import { AddToCartButton } from './AddToCartButton';
+import SizesRadionButtons from '../../common/SizesRadioButtons';
+import AddToCartButton from './AddToCartButton';
+import { useSelectedProductContext } from '../../SelectedProductContext';
 
-const DetailedProductCard = (props) => {
+const DetailedProductCard = () => {
+
+    const { selectedProduct } = useSelectedProductContext();
+
+    if (!selectedProduct) {
+        return null;
+    }
+
     return (<div className='detailed-product-card'>
         <div className="product-images">
-            <img src={props.imagePath} alt="Product 1" />
-            <img src={props.imagePath} alt="Product 1" />
-            <img src={props.imagePath} alt="Product 1" />
+            <img src={require(`../../../${selectedProduct.imagePath}`)} alt="Product 1" />
+            <img src={require(`../../../${selectedProduct.imagePath}`)} alt="Product 1" />
+            <img src={require(`../../../${selectedProduct.imagePath}`)} alt="Product 1" />
         </div>
         <div className="product-info">
             <div className="title">
-                <h1>{props.productTitle}</h1>
+                <h1>{selectedProduct.title}</h1>
             </div>
             <br/>
             <div className="price">
-                <h3>
-                {props.productPrice}
-                </h3>
+                <h3>${selectedProduct.price}</h3>
             </div>
             <br/>
             <br/>
@@ -32,7 +38,7 @@ const DetailedProductCard = (props) => {
             <br/>
             <br/>
             <div className="add-to-cart-button">
-                <AddToCartButton />
+                <AddToCartButton name="Add To Cart"/>
             </div>
             <br/>
             <br/>
@@ -40,13 +46,13 @@ const DetailedProductCard = (props) => {
                 <h6>Product Info</h6>
             </div>
             <div className="product-info-description">
-                <p>{props.productInfo}</p>
+                <p>{selectedProduct.description}</p>
             </div>
             <div className="shipping-info-title">
                 <h6>Shipping Info</h6>
             </div>
             <div className="shipping-info-description">
-                <p>{props.productShippingInfo}</p>
+                <p>{selectedProduct.shipping}</p>
             </div>
 
         </div>

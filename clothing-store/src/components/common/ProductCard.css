@@ -9,8 +9,13 @@
 
 .product-card .product-image {
     height: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.product-card .product-image a{
+    width: 100%;
 }
   
 .product-image img {
