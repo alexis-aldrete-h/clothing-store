@@ -16,13 +16,14 @@ function AddToCartButton(props) {
 
   const handleProductAdded = () => {
     const selectedProductTitle = selectedProduct.title;
+    const selectedProductSize = selectedProduct.size;
   
-    const productInCart = cartProductsData.find((product) => product.title === selectedProductTitle);
+    const productInCart = cartProductsData.find((product) => product.title === selectedProductTitle && product.size === selectedProductSize);
   
     if (productInCart) {
 
       const updatedCartProducts = cartProductsData.map((product) => {
-        if (product.title === selectedProductTitle) {
+        if (product.title === selectedProductTitle && product.size === selectedProductSize) {
           const updatedQuantity = product.quantity + 1;
           return { ...product, quantity: updatedQuantity };
         }
@@ -41,9 +42,11 @@ function AddToCartButton(props) {
     handleProductAdded();
   }
 
-  const handleQuantityChange = (title, change) => {
+  const handleQuantityChange = (change, title, size) => {
+    
     const updatedProducts = cartProductsData.map((product) => {
-      if (product.title === title) {
+      if (product.title === title && product.size === size) {
+  
         const updatedQuantity = product.quantity + change;
         return { ...product, quantity: updatedQuantity > 1 ? updatedQuantity : 1 };
       }
@@ -53,9 +56,16 @@ function AddToCartButton(props) {
     setCartProductsData(updatedProducts);
   };
 
-  const handleProductRemoved = (title) => {
-    const updatedProducts = cartProductsData.filter((product) => product.title !== title);
-    setCartProductsData(updatedProducts);
+  const handleProductRemoved = (title, size) => {
+    const indexToRemove = cartProductsData.findIndex(
+      (product) => product.title === title && product.size === size
+    );
+
+    if (indexToRemove !== -1) {
+      const updatedProducts = [...cartProductsData];
+      updatedProducts.splice(indexToRemove, 1);
+      setCartProductsData(updatedProducts);
+    }
   };
 
   return (
