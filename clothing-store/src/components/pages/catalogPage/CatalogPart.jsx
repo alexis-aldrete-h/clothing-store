@@ -13,9 +13,9 @@ const CatalogPart = () => {
             <ProductCard
               key={product.productId}
               productId={product.productId}
-              imagePath={require(`../../../${product.imagePath}`)}
-              title={product.title}
-              price={product.price}
+              productImagePath={product.imagePath}
+              productTitle={product.title}
+              productPrice={product.price}
             />
           ))}
         </div>

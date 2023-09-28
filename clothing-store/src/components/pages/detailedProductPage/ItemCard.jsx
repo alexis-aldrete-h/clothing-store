@@ -21,10 +21,19 @@ const ItemCard = (props) => {
                 <p className="item-price">${props.price}</p>
                 <p className="item-size">{props.size}</p>
                 <div className="quantity-info">
-                    <button className="symbol-button" onClick={() => handleQuantityChange(-1, props.title, props.size)}>-</button>
+                    <button className="symbol-button" onClick={() => {
+                        handleQuantityChange(-1, props.title, props.size);
+                        props.updateTotalBalance();
+                    }}>-</button>
                     <p>{props.quantity}</p>
-                    <button className="symbol-button" onClick={() => handleQuantityChange(+1, props.title, props.size)}>+</button>
-                    <button className="remove-button" onClick={() => handleProductRemoved(props.title, props.size)}>Remove</button>
+                    <button className="symbol-button" onClick={() => {
+                        handleQuantityChange(+1, props.title, props.size);
+                        props.updateTotalBalance();
+                    }}>+</button>
+                    <button className="remove-button" onClick={() => {
+                        handleProductRemoved(props.title, props.size);
+                        props.updateTotalBalance();
+                    }}>Remove</button>
                 </div>
             </div>
         </div>
