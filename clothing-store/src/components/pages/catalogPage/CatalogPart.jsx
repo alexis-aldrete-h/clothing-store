@@ -11,11 +11,14 @@ const CatalogPart = () => {
         <div className='catalog-part'>
             {catalogProductsData.map((product) => (
             <ProductCard
-              key={product.productId}
-              productId={product.productId}
-              productImagePath={product.imagePath}
-              productTitle={product.title}
-              productPrice={product.price}
+                key={product.productId}
+                productId={product.productId}
+                productTitle={product.title}
+                productPrice={product.price}
+                productDescription={product.description}
+                productShipping={product.shipping}
+                productImagePath={product.imagePath}
+                productQuantity={1}
             />
           ))}
         </div>
