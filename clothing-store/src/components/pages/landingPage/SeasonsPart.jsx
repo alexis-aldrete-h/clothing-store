@@ -8,12 +8,12 @@ const SeasonsPart = (props) => {
         <div className='seasons-part'>
             <div className='season-one'>
                 <div className='season-container-title-card-wrapper'>
-                    <TitleButtonCard  title="Isla Bonita" buttonTitle="SNEAK A PEAK"/>
+                    <TitleButtonCard  title="Isla Bonita" buttonTitle="SNEAK A PEAK" link="/catalog-page"/>
                 </div>
             </div>
             <div className='season-two'>
                 <div className='season-container-title-card-wrapper'>
-                    <TitleButtonCard  title="Current Availabilities" buttonTitle="SHOP NOW"/>
+                    <TitleButtonCard  title="Current Availabilities" buttonTitle="SHOP NOW" link="/catalog-page"/>
                 </div>
             </div>
         </div>

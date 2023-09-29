@@ -2,6 +2,8 @@ import React from 'react';
 
 import './TitleButtonCard.css';
 
+import { Link } from 'react-router-dom';
+
 const TitleButtonCard = (props) => {
     return (
         <div className='title-button-card'>
@@ -9,7 +11,9 @@ const TitleButtonCard = (props) => {
                 <h1>{props.title}</h1>
             </div>
             <div className='button-wrapper'>
-                <button>{props.buttonTitle}</button>
+                <Link to={props.link}>
+                    <button>{props.buttonTitle}</button>
+                </Link>
             </div>
         </div>
     )

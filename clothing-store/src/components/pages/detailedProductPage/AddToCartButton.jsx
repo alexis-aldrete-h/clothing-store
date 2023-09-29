@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import OffCanvas from './OffCanvas'; 
+import CartOffCanvas from './CartOffCanvas'; 
 
 import './AddToCartButton.css';
 
@@ -8,13 +8,14 @@ import { useSelectedProductContext } from '../../SelectedProductContext';
 import { useCartContext } from '../../CartContext';
 
 function AddToCartButton(props) {
-  const [show, setShow] = useState(false);
   const { cartProductsData, setCartProductsData } = useCartContext();
   const { selectedProduct } = useSelectedProductContext();
 
-  const toggleShow = () => setShow((s) => !s);
+  const [showCartOffcanvas, setShowCartOffcanvas] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const toggleCartOffcanvas = () => setShowCartOffcanvas((s) => !s);
+
+  const handleCloseCartOffCanvas = () => setShowCartOffcanvas(false);
 
   const handleProductAdded = () => {
     const selectedProductTitle = selectedProduct.title;
@@ -44,7 +45,7 @@ function AddToCartButton(props) {
   };
   
   const handleAddToCartButtonPressed = () => {
-    toggleShow();
+    toggleCartOffcanvas();
     handleProductAdded();
   }
 
@@ -79,9 +80,9 @@ function AddToCartButton(props) {
       <Button variant="light" onClick={handleAddToCartButtonPressed} className="me-2">
         ADD TO CART
       </Button>
-      <OffCanvas
-        show={show}
-        handleClose={handleClose}
+      <CartOffCanvas
+        show={showCartOffcanvas}
+        handleClose={handleCloseCartOffCanvas}
         cartProductsData={cartProductsData}
         handleQuantityChange={handleQuantityChange}
         handleProductRemoved={handleProductRemoved}

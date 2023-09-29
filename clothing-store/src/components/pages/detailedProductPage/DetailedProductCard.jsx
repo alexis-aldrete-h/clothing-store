@@ -9,10 +9,6 @@ const DetailedProductCard = () => {
 
     const { selectedProduct } = useSelectedProductContext();
 
-    if (!selectedProduct) {
-        return null;
-    }
-
     return (<div className='detailed-product-card'>
         <div className="product-images">
             <img src={require(`../../../${selectedProduct.imagePath}`)} alt="Product 1" />

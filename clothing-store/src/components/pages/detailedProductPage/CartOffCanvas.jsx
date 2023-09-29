@@ -4,7 +4,7 @@ import ItemCard from './ItemCard';
 import './AddToCartButton.css';
 import TotalBalance from './TotalBalance';
 
-function OffCanvas({ show, handleClose, cartProductsData, handleQuantityChange, handleProductRemoved }) {
+function CartOffCanvas({ show, handleClose, cartProductsData, handleQuantityChange, handleProductRemoved }) {
   const [totalBalance, setTotalBalance] = useState(0);
 
   useEffect(() => {
@@ -19,14 +19,16 @@ function OffCanvas({ show, handleClose, cartProductsData, handleQuantityChange, 
   }, [cartProductsData]);
 
   const updateTotalBalance = () => {
-    let newTotalBalance = 0;
-    if(cartProductsData.length !== 0){
+    if (cartProductsData.length === 1) {
+      setTotalBalance(0); 
+    } else {
+      let newTotalBalance = 0;
       cartProductsData.forEach((cartProduct) => {
         const price = parseFloat(cartProduct.price);
         newTotalBalance += price * cartProduct.quantity;
       });
       setTotalBalance(newTotalBalance);
-    } 
+    }
   };
 
   return (
@@ -57,4 +59,4 @@ function OffCanvas({ show, handleClose, cartProductsData, handleQuantityChange, 
   );
 }
 
-export default OffCanvas;
+export default CartOffCanvas;
